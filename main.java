@@ -11,7 +11,7 @@ public class main {
 
         ArrayList<Figura> Formas = new ArrayList<Figura>();
 
-         int equis, ye, rBase, rAlt;
+         int x, y, rBase, rAlt;
 
         JFrame aplicacion = new JFrame();
         aplicacion.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -23,20 +23,20 @@ public class main {
         switch(figura){
             case "rectangulo":
 
-                String posx = JOptionPane.showInputDialog( "Introduzca la posicion en X" );
-                String posy = JOptionPane.showInputDialog( "Introduzca la posicion en Y" );
-                String color = JOptionPane.showInputDialog( "Introduzca el color de la figura" );
-                String base = JOptionPane.showInputDialog( "Introduzca la base del rectangulo" );
-                String altura = JOptionPane.showInputDialog( "Introduzca la altura del rectangulo" );
+                String posx = JOptionPane.showInputDialog( "Ingrese la posicion en X" );
+                String posy = JOptionPane.showInputDialog( "Ingrese la posicion en Y" );
+                String color = JOptionPane.showInputDialog( "Ingrese el color de la figura" );
+                String base = JOptionPane.showInputDialog( "Ingrese la base del rectangulo" );
+                String altura = JOptionPane.showInputDialog( "Ingrese la altura del rectangulo" );
 
 
-                equis = Integer.parseInt(posx);
-                ye = Integer.parseInt(posy);
+                x = Integer.parseInt(posx);
+                y = Integer.parseInt(posy);
                 rAlt = Integer.parseInt(altura);
                 rBase = Integer.parseInt(base);
 
                 //Figura obj = new Figura(color,figura,equis,ye);
-                Rectangulo rect = new Rectangulo(rBase, rAlt, color,figura,equis,ye);
+                Rectangulo rect = new Rectangulo(rBase, rAlt, color,figura,x,y);
                 Formas.add(rect);
                 aplicacion.add(rect);
                 break;
